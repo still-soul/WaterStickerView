@@ -1,7 +1,6 @@
 package com.ztk.waterstickerview.utils
 
 import android.content.Context
-import com.ztk.waterstickerview.R
 import com.ztk.waterstickerview.bean.*
 import com.ztk.waterstickerview.view.watermark.*
 import kotlinx.coroutines.Dispatchers
@@ -41,11 +40,11 @@ object WaterMarkStickerProviderFactory {
         return when (waterMarkViewBean.waterMarkType) {
             //宝宝成长记录水印
             WaterMarkType.BABY_GROWTH_RECORD_TYPE ->
-                BabyGrowthRecordWaterView(context, waterMarkViewBean = waterMarkViewBean)
+                RecordWaterView(context, waterMarkViewBean = waterMarkViewBean)
             else -> {
                 LogUtil.e("waterMarkType = ${waterMarkViewBean.waterMarkType}")
                 //找不到水印类型，默认宝宝成长记录水印
-                BabyGrowthRecordWaterView(context, waterMarkViewBean = waterMarkViewBean)
+                RecordWaterView(context, waterMarkViewBean = waterMarkViewBean)
             }
         }
     }

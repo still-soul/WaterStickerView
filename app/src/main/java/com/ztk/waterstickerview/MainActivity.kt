@@ -77,7 +77,9 @@ class MainActivity : AppCompatActivity() {
                     DecorationElementContainerView.OnEditClickCallBack {
                 override fun onEditClick() {
                     waterMarkElement = waterMarkStickerElementView.selectElement as WaterMarkElement
-                    //这里做编辑逻辑
+                    //这里根据不同的需求做编辑逻辑
+                    //编辑完之后的操作，调用view的更新操作例如水印的updateView()方法
+                    //waterMarkElement.updateDecorationViewHeight()方法
                 }
             })
             waterMarkStickerElementView.addSelectAndUpdateElement(waterMarkElement, true)

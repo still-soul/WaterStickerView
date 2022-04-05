@@ -8,10 +8,10 @@ import com.ztk.waterstickerview.R
 import com.ztk.waterstickerview.bean.WaterMarkViewBean
 
 /**
- * 宝宝成长记录水印
+ * 记录水印
  * @author xiaoman
  */
-class BabyGrowthRecordWaterView(
+class RecordWaterView(
     context: Context,
     attrs: AttributeSet? = null,
     defStyleAttr: Int = 0,
@@ -25,7 +25,7 @@ class BabyGrowthRecordWaterView(
     private lateinit var tvLocation: TextView
     private lateinit var tvDiary: TextView
     override fun getLayoutId(): Int {
-        return R.layout.water_record_baby_growth
+        return R.layout.water_record
     }
 
     override fun getContentViewId(): Int {
